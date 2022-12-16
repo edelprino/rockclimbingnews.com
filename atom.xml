@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>RockClimbing News</title>
+	<subtitle>RockClimbing News</subtitle>
+	<link href="https://rockclimbingnews.com/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://rockclimbingnews.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-12-16T00:00:00+00:00</updated>
+	<id>https://rockclimbingnews.com/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Issue #0 - December 16, 2022</title>
+		<published>2022-12-16T00:00:00+00:00</published>
+		<updated>2022-12-16T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://rockclimbingnews.com/0/" type="text/html"/>
+		<id>https://rockclimbingnews.com/0/</id>
+		<content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.climbing.com&#x2F;places&#x2F;sicily-italy-rock-climbing&#x2F;&quot;&gt;Hate Winter? Love Sicily Instead&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; Tufas, food, wine, sunshine, and a hearty culture await those who escape to the Italian island climbing paradise&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;newspaper-news&quot;&gt;📰 News&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.climber.co.uk&#x2F;news&#x2F;adam-ondra-makes-fa-of-zv-inec-at-hard-f9b&#x2F;&quot;&gt;Adam Ondra makes FA of Zvěřinec at hard F9b+&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; Adam Ondra has confirmed making the first ascent of Zvěřinec (Menagerie) F9b+ at his home crag Moravian Karst in the Czech Republic&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gripped.com&#x2F;profiles&#x2F;simon-lorenzi-climbs-his-second-v17-with-alphane&#x2F;&quot;&gt;Simon Lorenzi Climbs His Second V17 With Alphane&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; Simon Lorenzi, 25, has repeated Alphane in Chironico after several sessions this year, making him one of only two climbers to have climbed two V17 problems. This is the fourth ascent of Alphane.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tv-videos&quot;&gt;📺 Videos&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=BbreQjA-1_s&quot;&gt;Deep Water Solo First Ascents in Mallorca&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; Deep water solo first ascents at Cala Magrana. A cave we found while searching for new lines. We could establish 6 new lines, from 6c to 8c. There is still potential for more routes.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=td__pF4Ff2o&quot;&gt;Round One on PROJECT BIG - Jakob Schubert &amp;amp; Adam Ondra&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; Despite the many great and hard climbs in Flatanger, there had always been this special mystery around &amp;quot;Project Big&amp;quot;. Adam Ondra had bolted it the same trip he bolted the climb that became &amp;quot;Silence&amp;quot;, and although Adam himself considers it &amp;quot;the real line of the cave&amp;quot;, it remained a project since.
+When Adam invited Jakob to try &amp;quot;Project Big&amp;quot; together, it was an easy decision to join forces in aiming for the first ascent. Join in for some climbing wizardry, and see what it&#x27;s like when two of the world&#x27;s best push hard for the first ascent of THE unclimbed line in Flatanger.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=qLByxu_iFfI&quot;&gt;From Urban Rock Climbing To World Champion, Aleksandra Totkova&#x27;s Story&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; Alex Totkova&#x27;s story is not the usual world champion story that you will hear when you hang out with the world&#x27;s best at the next climbing competition. This story is rooted in family, friends and sacrifice, a quiet and relentless determination to succeed, and a love for climbing.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
