@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content={% block description %}{{ config.description }}{% endblock %}>
+  <title>{{ config.title }} {% block title %}{% endblock title %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  {% if config.generate_feed %}
+    <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+  {% endif %}
+  `
+  <script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"ccpaAcknowledgeOnDisplay":true,"consentOnContinuedBrowsing":false,"countryDetection":true,"enableCcpa":true,"enableLgpd":true,"floatingPreferencesButtonDisplay":"bottom-right","invalidateConsentWithoutLog":true,"lang":"en","lgpdAppliesGlobally":false,"perPurposeConsent":true,"siteId":2891968,"whitelabel":false,"cookiePolicyId":93570199, "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-bottom-right","rejectButtonDisplay":true }};
+  </script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container" style="max-width: 800px">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{config.base_url}}">
+        <h1 class="title is-3">{{ config.title }}</h1>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu navbar-end" id="menu">
+      <div class="navbar-item">
+      {% if config.generate_feed %}
+        <a href="{{ get_url(path=config.feed_filename) | safe }}">RSS</a>
+      {% endif %}
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+  <div class="container" style="max-width: 800px">
+    <form class="has-text-centered">
+      <div class="field">
+        <div class="control is-expanded">
+          <input id="email" class="input is-fullwidth" type="text" placeholder="Want to subscribe? Enter your email address here">
+        </div>
+      </div>
+      <div><a id="subscribe-button" class="button is-info"> Subscribe now!</a></div>
+      <div class="is-size-7 has-text-centered block">Easy to unsubscribe at any time. Your e-mail address is safe — here's our <a href="/privacy">privacy policy</a>.</div>
+    </form>
+  </div>
+  </section>
+
+  <div class="container" style="max-width: 800px; margin-top: 20px">
+    {% block content %} {% endblock %}
+  </div>
+
+  <div class="has-text-centered" style="margin: 30px 0">
+    <p class="is-size-7">
+      <a href="{{config.base_url}}">{{ config.title }}</a> is created by <a href="https://edelprino.com">Ettore Delprino</a>
+    </p>
+    <a href="https://www.iubenda.com/privacy-policy/93570199" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+  </div>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    [...document.querySelectorAll('.navbar-burger')].forEach(el => {
+      el.addEventListener('click', () => {
+        const $target = document.getElementById(el.dataset.target)
+        el.classList.toggle('is-active')
+        $target.classList.toggle('is-active')
+      })
+    })
+
+    document.getElementById('subscribe-button').addEventListener('click', () => {
+      fetch("https://api.airtable.com/v0/appxauMzM76PEp2Aw/tbleIA1Jcz3j3Wi7V", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          'Authorization': 'Bearer pat4OOGlgUnjOwRl4.88453eea7317de3df7b1b5d409be9da2ba7001e80df03bdbbc520d42f1cf12a6',
+        },
+        body: JSON.stringify({
+          records: [
+            {
+              fields: {
+                Email: document.getElementById('email').value,
+              }
+            }
+          ]
+        })
+      }).then(() => {
+        alert('Thanks for subscribing!')
+      })
+    });
+  })
+</script>
+</html>
